@@ -1,0 +1,74 @@
+while loop
+
+var i = 1;
+
+while (i <= 5) {
+   // document.write(`${i} `);
+    console.log(i);
+    i++;
+}
+
+//1 2 3 4 5
+
+var i = 1;
+do {
+    document.write(`${i} `);
+    i++;
+} while (i <= 5);
+
+//1 2 3 4 5
+
+//for loop
+
+var i = 1;
+for (; i <= 5;) {
+    document.write(`${i} `);
+    i++;
+}
+
+document.write(`<br/>`);
+
+
+for (var i = 1; i <= 10; i++) {
+    break;
+    document.write(`${i} `);
+}
+document.write(`<br/>`);
+document.write('loop executed successfully. ');
+
+
+for (var i = 1; i <= 10; i++) {
+    if (i == 3) {
+        break;
+    }
+    document.write(`${i} `);
+}
+document.write(`<br/>`);
+document.write('loop executed successfully. ');
+
+
+for (var i = 1; i <= 10; i++) {
+    if (i == 3){
+        continue;
+    }
+    document.write(`${i} `);
+}
+document.write(`<br/>`);
+document.write('loop executed successfully. ');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
