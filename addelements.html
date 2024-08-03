@@ -1,0 +1,101 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <h2>add elements demo</h2>
+
+    <input type="button" value="click me!!!" id="btn" />
+
+    <div>
+        <p id="p1"><b>Original Paragraph Text</b></p>
+    </div>
+
+    <table id="abp">
+        <tr>
+            <td>
+                <input type="text" />
+            </td>
+        
+            <td>
+                <input type="text"/>
+            </td>
+
+        <td>
+            <input type="button" value="+" id="plus"/>
+        </td>
+
+        </tr>
+
+
+    </table>
+    
+
+
+
+    <script src="Scripts/jquery.min.js"></script>
+
+    <script>
+        $(function () {
+            $('#btn').click(function () {
+                $('#p1').append('Appended Text');
+                $('#p1').prepend('prepend Text');
+                $('#p1').after('after Text');
+                $('#p1').before('before Text');
+
+            });
+
+            //$('#plus').click(function () {
+            //    var row = `<tr>
+            //   <td><input type="text" /></td>
+            //    <td><input type="text"/></td>
+            //    <td><input type="button" value="+" id="plus"/></td>
+            //     </tr>`;
+            //    $('#abp').append(row);
+
+            //});
+
+            //$('#abp').on("click", "[value='+']", function () {
+            //    var row = `<tr>
+            //    <td><input type="text" /></td>
+            //    <td><input type="text"/></td>
+            //    <td><input type="button" value="+"/></td>
+            //    </tr>`;
+            //    $('#abp').append(row);
+
+            //});
+
+            var counter = 1;
+            var maxPassengers = 4;
+            $('#abp').on("click", "[value='+']", function () {
+                if (counter <= maxPassengers) {
+
+                    var row = `<tr>
+                <td><input type="text"/></td>
+                <td> <input type="text"/></td>
+                 <td><input type="button" value="+"/></td>
+                 </tr>`;
+                    counter++;
+                } else {
+                    alert('Maximum 5 passengers allowed per ticket.');
+                }
+
+                $('#abp').append(row);
+            });
+        });
+
+        $('#btn').click(function () {
+           $('#abp').remove();
+            $('#abp').empty();
+
+        });
+   
+
+
+    </script>
+
+
+</body>
+</html>
